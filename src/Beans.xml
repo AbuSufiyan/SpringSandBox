@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+<bean id="helloWorld" class="com.sandune.HelloWorld" init-method="init" >
+<property name="message1" value="Hello World"/>
+<property name="message2" value="Ahoy World"/>
+</bean>
+
+<bean id="helloIndia" class="com.sandune.HelloIndia" parent="helloWorld" scope="singleton">
+<property name="message1" value="hello India"></property>
+<property name="message3" value="Ahoy India"></property>
+</bean>
+<bean id="definitionTemplate" abstract="true" >
+  <property name="text1" value="nothing1"></property>  
+  <property name="text2" value="nothing2"></property>  
+  <property name="text3" value="nothing3"></property>  
+</bean>
+
+<bean id="nuGen" class="com.sandune.NuGen" parent="definitionTemplate">
+    <property name="text1" value="from xml"></property>
+       
+</bean>
+
+
+
+<!-- <bean class="com.sandune.InitHelloWorld"/> -->
+
+</beans>
