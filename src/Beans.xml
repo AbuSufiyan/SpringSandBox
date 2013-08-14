@@ -10,7 +10,7 @@ http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 <property name="message2" value="Ahoy World"/>
 </bean>
 
-<bean id="helloIndia" class="com.sandune.HelloIndia" parent="helloWorld" scope="singleton">
+<bean id="helloIndia" class="com.sandune.HelloIndia" parent="helloWorld" scope="singleton" >
 <property name="message1" value="hello India"></property>
 <property name="message3" value="Ahoy India"></property>
 </bean>

@@ -36,4 +36,9 @@ public class HelloIndia
         System.out.println( "India Message3 : " + message3 );
     }
 
+    public void init()
+    {
+        // just because parent has it
+    }
+
 }
